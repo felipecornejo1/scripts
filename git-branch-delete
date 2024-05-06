@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+branch=$(git branch | fzf)
+if [ -z "$branch" ]; then
+    exit 1
+fi
+git branch -D $branch
+
+
